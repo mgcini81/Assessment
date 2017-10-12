@@ -15,6 +15,10 @@ namespace Assessment.Repository.Data
         public IQueryable<IPerson> Data { get; set; }
         private readonly string _fileName = "data.csv";      
         private static readonly ILog _logger = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
+
+        /// <summary>
+        /// Loads the data from the csv file. The data is stored in the Data property
+        /// </summary>
         public void Load()
         {
             try

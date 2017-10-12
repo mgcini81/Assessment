@@ -37,6 +37,10 @@ namespace Assessment.Repository.Data
                     _logger.Error(ex.StackTrace);
                 }
         }
+
+        /// <summary>
+        /// Opens the folder onto which the output files have been saved.
+        /// </summary>
         public void OpenLogDirectory()
         {
             try
@@ -50,6 +54,11 @@ namespace Assessment.Repository.Data
             }
         }
 
+
+        /// <summary>
+        /// Writes to output file
+        /// </summary>
+        /// <param name="message">the message to be written</param>
         public void WriteToOutPutFile(StringBuilder message)
         {
             string  _filename = Path.Combine(folder, String.Format("{0}{1}{2}", "OutPutFile_", Guid.NewGuid(), ".csv"));
