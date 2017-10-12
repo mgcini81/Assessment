@@ -37,9 +37,9 @@ namespace Assessment.ConsoleUI
             _writter.WriteToOutPutFile(sbfr);
             _writter.WriteToOutPutFile(sbsort);
             Console.WriteLine("Opening Output Folder");
-            Console.WriteLine("Press any key to exit....");
+            Console.WriteLine("Press any key to exit and open the Output Folder....");           
+            Console.ReadKey();
             _writter.OpenLogDirectory();
-            Console.ReadKey();           
 
         }
 
