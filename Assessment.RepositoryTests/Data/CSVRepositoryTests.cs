@@ -10,6 +10,10 @@ namespace Assessment.Repository.Data.Tests
     [TestClass()]
     public class CSVRepositoryTests
     {
+
+        /// <summary>
+        /// Tests if the data is parsed and loaded properly from the csv file
+        /// </summary>
         [TestMethod()]
         public void GetAllTest()
         {
@@ -22,6 +26,10 @@ namespace Assessment.Repository.Data.Tests
             Assert.IsTrue(data.Count() > 0);
         }
 
+
+        /// <summary>
+        /// Tests whether the Assessment.Repository.Data.CSVRepository. GetNameFrequency() works as designed. In this case, we expect the first IPerson object to be Clive and the frequency count to be 2
+        /// </summary>
         [TestMethod()]
         public void GetNameFrequencyTest()
         {
@@ -34,6 +42,10 @@ namespace Assessment.Repository.Data.Tests
             Assert.IsTrue((frequencies.Count() > 0) && frequencies.FirstOrDefault().Value == "Clive" && frequencies.FirstOrDefault().Count == 2);
         }
 
+
+        /// <summary>
+        /// Tests whether the Assessment.Repository.Data.CSVRepository.GetSortedAddresses() works as designed. In this case, we expect the first top address to be '65 Ambling Way'
+        /// </summary>
         [TestMethod()]
         public void GetSortedAddressesTest()
         {
