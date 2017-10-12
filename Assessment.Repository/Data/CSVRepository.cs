@@ -18,10 +18,7 @@ namespace Assessment.Repository.Data
             _dataprovider = dtprovider;            
             _dataprovider.Load();
         }        
-         /// <summary>
-         /// Returns all the IPerson objects in the Data object of the data provider
-         /// </summary>
-         /// <returns></returns>
+         
         public IEnumerable<IPerson> GetAll()
         {
             try
@@ -36,11 +33,6 @@ namespace Assessment.Repository.Data
             }
         }
 
-        /// <summary>
-        /// Returns the single or default IPerson that meets the criteria specified in the predicate
-        /// </summary>
-        /// <param name="predicate">the filter</param>
-        /// <returns></returns>
         public  IPerson SingleOrDefault(Expression<Func<IPerson, bool>> predicate)
         {
             try
@@ -55,10 +47,6 @@ namespace Assessment.Repository.Data
             }
         }
 
-        /// <summary>
-        /// Returns the frequency of the first and last names ordered by frequency descending and then alphabetically ascending
-        /// </summary>
-        /// <returns></returns>
         public IEnumerable<IFrequency> GetNameFrequency()
         {
             try
@@ -75,10 +63,6 @@ namespace Assessment.Repository.Data
             }
         }
 
-        /// <summary>
-        /// Returns Addresses sorted by street name
-        /// </summary>
-        /// <returns></returns>
         public IEnumerable<IAddress> GetSortedAddresses()
         {
             try
